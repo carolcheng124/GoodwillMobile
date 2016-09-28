@@ -1,0 +1,173 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.10
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:8889
+-- Generation Time: Apr 08, 2016 at 09:50 PM
+-- Server version: 5.5.42
+-- PHP Version: 5.6.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `Goodwill`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Donation`
+--
+
+CREATE TABLE `Donation` (
+  `did` int(10) NOT NULL,
+  `month` int(5) NOT NULL,
+  `day` int(5) NOT NULL,
+  `year` int(10) NOT NULL,
+  `dname` varchar(20) NOT NULL,
+  `value` int(10) NOT NULL,
+  `amount` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Donation`
+--
+
+INSERT INTO `Donation` (`did`, `month`, `day`, `year`, `dname`, `value`, `amount`) VALUES
+(1, 2, 2, 2016, 'dfsa', 10, 10),
+(2, 3, 7, 2016, 'book', 20, 5),
+(4, 6, 4, 2016, 'water', 1, 10),
+(5, 4, 5, 2016, 'shirt', 10, 1),
+(6, 7, 1, 2016, 'tshirt', 1, 2),
+(7, 11, 4, 2016, 'watch', 100, 1),
+(8, 3, 5, 2016, 'mirror', 5, 1),
+(9, 4, 4, 0, 'clothes', 2, 2),
+(10, 6, 5, 2016, 'clothes', 10, 5),
+(11, 4, 4, 2016, 'water', 10, 1),
+(12, 4, 2, 2016, 'hello', 1, 3),
+(13, 1, 1, 2016, 'bread', 10, 1),
+(14, 1, 1, 2016, 'glasses', 50, 1),
+(15, 3, 1, 2016, 'bread', 10, 1),
+(16, 1, 2, 2016, 'bread', 5, 1),
+(17, 2, 2, 2016, 'glasses', 5, 1),
+(18, 3, 6, 2016, 'bred', 10, 10),
+(19, 1, 2, 2016, 'bread', 10, 1),
+(20, 3, 1, 2016, 'glasses', 100, 1),
+(21, 1, 1, 2016, 'water', 2, 1),
+(22, 2, 2, 2016, 'clothes', 20, 1),
+(23, 2, 3, 2016, 'clothes', 100, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Rewards`
+--
+
+CREATE TABLE `Rewards` (
+  `uid` int(10) NOT NULL,
+  `to_rewards` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Rewards`
+--
+
+INSERT INTO `Rewards` (`uid`, `to_rewards`) VALUES
+(4, '100'),
+(5, '100'),
+(6, '100');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `User`
+--
+
+CREATE TABLE `User` (
+  `uid` int(10) NOT NULL,
+  `firstname` varchar(20) NOT NULL,
+  `lastname` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `phone` int(10) NOT NULL,
+  `street` varchar(30) NOT NULL,
+  `city` varchar(30) NOT NULL,
+  `state` varchar(20) NOT NULL,
+  `zipcode` int(10) NOT NULL,
+  `race` varchar(50) NOT NULL,
+  `income` varchar(50) NOT NULL,
+  `frequency_dot` varchar(50) NOT NULL,
+  `distance_to_donation` varchar(50) NOT NULL,
+  `drivetime` varchar(50) NOT NULL,
+  `ifshop` varchar(20) NOT NULL,
+  `frequency_shop` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `User`
+--
+
+INSERT INTO `User` (`uid`, `firstname`, `lastname`, `email`, `password`, `phone`, `street`, `city`, `state`, `zipcode`, `race`, `income`, `frequency_dot`, `distance_to_donation`, `drivetime`, `ifshop`, `frequency_shop`) VALUES
+(0, 'dfsa', 'fsa', 'fdsa@ga.com', 'fdsa', 3213, '1431', 'fsda', 'AL', 0, '', '', '', '', '', '', ''),
+(1, 'fdas', 'fdsa', 'fdsa@ga.com', 'dfas', 1322, 'fdas', 'fdsa', 'AK', 312, 'American Indian or Alaska Native', '$25,000-$50,000', '4-9 times a year', '0-3 mile', 'Less than 5 mins', 'Yes', 'Once a year'),
+(2, 'dfsa', 'dfsa', 'dfsa@ga.com', 'fdas', 32123, 'fdsafsa', 'fdas', 'AZ', 12311, 'American Indian or Alaska Native', '$50,000-$100,000', 'Greater than 15 times a year', '4-10 mile', '10 mins', 'Yes', '2-5 times a year'),
+(3, 'jack', 'cheng', 'john@gmail.com', 'john', 2147483647, '32 forbes ', 'Pittsburgh', 'PA', 10000, 'White', '$25,000-$50,000', '4-9 times a year', '', '10 mins', 'Yes', '2-5 times a year'),
+(4, 'XIN', 'JIN', 'ysjinxin@gmail.com', '1234', 2147483647, '1 Bayard Road APT 21', 'Pittsburgh', 'PA', 15213, 'Asian', '$25,000-$50,000', 'Less than 5 times a year', '0-3 mile', 'Less than 5 mins', 'Yes', 'Once a year'),
+(5, 'XIN', 'JIN', 'ysjinxin@gmail.com', '1234', 2147483647, '1 Bayard Road APT 21', 'Pittsburgh', 'PA', 15213, 'Asian', '$10,000-$25,000', 'Less than 5 times a year', '0-3 mile', 'Less than 5 mins', 'Yes', 'Once a year'),
+(6, 'abc', 'abc', 'hello@gmail.com', '1111', 1234, '1234', '2134', 'AK', 10000, 'White', '$25,000-$50,000', '4-9 times a year', '4-10 mile', '5 mins', 'Yes', 'Once a year');
+
+--
+-- Triggers `User`
+--
+DELIMITER $$
+CREATE TRIGGER `tri` AFTER INSERT ON `user`
+ FOR EACH ROW begin
+declare c int;
+set c = (select uid from User where User.uid=new.uid);
+INSERT INTO Rewards VALUES (c,'100');
+end
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `User_Donation`
+--
+
+CREATE TABLE `User_Donation` (
+  `uid` int(10) NOT NULL,
+  `did` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `User_Donation`
+--
+
+INSERT INTO `User_Donation` (`uid`, `did`) VALUES
+(0, 1),
+(0, 2),
+(0, 4),
+(0, 7),
+(0, 12),
+(4, 19),
+(4, 21),
+(4, 22),
+(4, 23);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `Donation`
+--
+ALTER TABLE `Donation`
+  ADD PRIMARY KEY (`did`);
+
+--
+-- Indexes for table `User`
+--
+ALTER TABLE `User`
+  ADD PRIMARY KEY (`uid`);

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>AddDonation</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<style>
+		body{
+			background-color:#BFE6D3;
+		}
+
+		#navbar{
+			background-color:white;
+		}
+
+		.navbar-header{
+			background-color: white;
+			padding-top:20px;
+		}
+
+		.container{
+			margin-top: 90px;
+			text-align: center;
+		}
+		.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+			background-color:lightgrey;
+		}
+
+		</style>
+	</head>
+
+	<body>
+		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+    	</script>
+
+    	<nav class="navbar navbar-default navbar-fixed-top">
+    		<div class="container-nav">
+
+    			<div class="navbar-header">
+    				<div class="row">
+	    				<div class="col-xs-2 col-xs-offset-1">
+		    				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+			    				<span class="sr-only">Toggle navigation</span>
+			    				<span class="icon-bar"></span>
+			    				<span class="icon-bar"></span>
+			    				<span class="icon-bar"></span>
+			    			</button>
+			    		</div><!--col-xs-2-->
+			    		<div class="col-xs-9">
+			    			<img src="images/home/logo.jpg" alt="GoodWill" style="margin-top:5px;height:50px;">
+			    		</div>
+			    	</div><!--row-->
+	    		</div><!--end of navbar-header-->
+
+	    		<div id="navbar" class="navbar-collapse collapse" aria-expanded="true">
+	    			<ul class="nav navbar-nav">
+	    					<li>
+	    						<a href="index.html">Home</a>
+	    					</li>
+	    					<li>
+	    						<a href="login.html">Profile</a>
+    						</li>
+    						<li class="active">
+    							<a href="donationList.php">Donate</a>
+    						</li>
+    						<li>
+    							<a href="http://www.goodwillswpa.org/goodwill-stores">Store</a>
+    						</li>
+    						<li>
+    							<a href="rewards.php">Rewards</a>
+    						</li>
+    						<li>
+    							<a href="give.html">Give</a>
+    						</li>
+								<li>
+									<a href="logout.php">log out</a>
+								</li>
+    				</ul>
+	    		</div><!--navbar-->
+	    	</div><!--container-->
+	    </nav><!--navigation bar---->
+
+	    <div class="container">
+	    	<h4 class="form-signin-heading">Please add your donation information</h4>
+	    	<br>
+	    	<div class="col-xs-10 col-xs-offset-1"style="padding:0">
+		    	<form action="addDonation.php" method="post">
+		    		<!--time-->
+		    		<div class="row">
+	        			<div class="col-xs-4" style="padding:0px">
+			        		<select name="month" class="form-control">
+								<option selected disabled>Month</option>
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+							</select>
+						</div><!--month-->
+						<div class="col-xs-4"  style="padding:0px">
+							<select name="day" class="form-control">
+								<option selected disabled>Date</option>
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+								<option>21</option>
+								<option>22</option>
+								<option>23</option>
+								<option>24</option>
+								<option>25</option>
+								<option>26</option>
+								<option>27</option>
+								<option>28</option>
+								<option>29</option>
+								<option>30</option>
+								<option>31</option>
+							</select>
+						</div><!--date-->
+						<div class="col-xs-4"  style="padding:0px">
+							<input type="text" name="year" class="form-control" placeholder="Year" aria-describedby="basic-addon1" value="">
+						</div><!--year-->
+					</div><!--row-->
+		        	<br>
+
+		    		<!--item-->
+		    		<div class="row">
+			    		<div class="input-group" style="padding:0px">
+			        	<span class="input-group-addon" id="basic-addon1">Name</span>
+				        <input type="text" name="itemname" class="form-control" placeholder="Name of donated item " aria-describedby="basic-addon1" value="">
+				      	</div>
+			      		<br>
+			      	</div><!--item-->
+
+			      	<div class="row">
+			      		<div class="col-xs-6" style="padding-left:0px;">
+					      	<!--price-->
+					      	<div class="input-group">
+				        	<span class="input-group-addon" id="basic-addon1">Price</span>
+					        <input type="text" name="price" class="form-control" placeholder="0" aria-describedby="basic-addon1" value="">
+					      	</div>
+					      	<br>
+					    </div>
+					    <div class="col-xs-6"style="padding-right:0px;">
+					      	<!--amount-->
+					      	<div class="input-group">
+				        	<span class="input-group-addon" id="basic-addon1">Amount</span>
+					        <input type="text" name="amount" class="form-control" placeholder="0" aria-describedby="basic-addon1" value="">
+					      	</div>
+					    </div>
+					</div><!--row-->
+
+					<input class="btn btn-lg btn-success btn-block" type="submit" name="submit" value="submit"></button>
+		    	</form>
+		    </div><!--col-xs-10-->
+
+	    </div><!--container-->
+
+
+	</body>
+</html>
